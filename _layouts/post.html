@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="wrap">
+  <div class="post-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="subtitle">{{ page.subtitle }}</p>{% endif %}
+
+    <div class="author-byline">
+      <img src="{{ page.author_avatar | default: '/assets/images/default-avatar.svg' | relative_url }}" alt="{{ page.author }}">
+      <div>
+        <div class="name">{{ page.author | default: "Anonymous" }}</div>
+        <div class="date">{{ page.date | date: "%B %-d, %Y" }} · {{ content | strip_html | number_of_words | divided_by: 200 | at_least: 1 }} min read</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+  <div class="tags">
+    {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

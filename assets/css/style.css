@@ -1,0 +1,204 @@
+:root {
+  --text: #242424;
+  --muted: #6b6b6b;
+  --border: #e6e6e6;
+  --accent: #1a8917;
+  --bg: #ffffff;
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+.site-header .wrap {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-nav a {
+  margin-left: 20px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+}
+.site-nav a.write-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* Post list */
+.post-list {
+  max-width: 700px;
+  margin: 40px auto;
+}
+.post-preview {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+.post-preview .meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.post-preview h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+.post-preview h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.post-preview h2 a:hover { text-decoration: underline; }
+.post-preview p.excerpt {
+  color: #4a4a4a;
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+.post-preview .footer-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Single post */
+.post-header {
+  max-width: 680px;
+  margin: 48px auto 24px;
+}
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+.post-header .subtitle {
+  font-size: 20px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.author-byline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.author-byline img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+}
+.author-byline .name {
+  font-weight: 600;
+  font-size: 15px;
+}
+.author-byline .date {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.post-content {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.8;
+  color: #292929;
+}
+.post-content p { margin: 0 0 28px; }
+.post-content h2 { font-size: 28px; margin: 40px 0 16px; }
+.post-content h3 { font-size: 22px; margin: 32px 0 12px; }
+.post-content img { max-width: 100%; border-radius: 4px; }
+.post-content blockquote {
+  border-left: 3px solid var(--text);
+  margin: 28px 0;
+  padding-left: 20px;
+  font-style: italic;
+  color: #555;
+}
+.post-content pre {
+  background: #f6f6f6;
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 15px;
+}
+.post-content code {
+  background: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.post-content a { color: var(--text); text-decoration: underline; }
+
+/* Tags */
+.tags { margin: 40px 0; }
+.tag {
+  display: inline-block;
+  background: #f2f2f2;
+  color: #444;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 13px;
+  margin: 0 8px 8px 0;
+  text-decoration: none;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.site-footer a { color: var(--muted); }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 20px auto 60px;
+  font-size: 14px;
+}
+.pagination a { color: var(--text); text-decoration: none; }
+
+@media (max-width: 600px) {
+  .post-header h1 { font-size: 30px; }
+  .post-content { font-size: 18px; }
+}
