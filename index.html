@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="post-list wrap">
+  {% for post in paginator.posts %}
+  <div class="post-preview">
+    <div class="meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.subtitle %}<p class="excerpt">{{ post.subtitle }}</p>
+    {% else %}<p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    {% endif %}
+    <div class="footer-meta">By {{ post.author | default: "Anonymous" }} · {{ post.content | strip_html | number_of_words | divided_by: 200 | at_least: 1 }} min read</div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination wrap">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">← Newer</a>
+  {% else %}<span></span>{% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Older →</a>
+  {% endif %}
+</div>
+{% endif %}

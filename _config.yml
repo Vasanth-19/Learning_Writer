@@ -1,0 +1,28 @@
+title: The Commons
+description: A publication built by its writers, one pull request at a time.
+baseurl: "" # repo name, e.g. "/medium-clone" if not using a custom domain
+url: "" # e.g. "https://yourusername.github.io"
+
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+paginate: 6
+paginate_path: "/page:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - node_modules
