@@ -8,6 +8,6 @@ permalink: /about/
   <p style="font-size: 18px; line-height: 1.7;">
     The Commons is a publication written entirely by its contributors.
     Anyone can propose a story by opening a pull request — no account, no gatekeeping beyond a friendly review.
-    See the <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/CONTRIBUTING.md">contributor guide</a> to get started.
+    See the <a href="https://github.com/vasanth-19.github.io/Learning_Writer/blob/main/CONTRIBUTING.md">contributor guide</a> to get started.
   </p>
 </div>
