@@ -1,8 +1,7 @@
 title: The Commons
 description: A publication built by its writers, one pull request at a time.
-baseurl: "" # repo name, e.g. "/medium-clone" if not using a custom domain
+baseurl: "Learning_Writer" # repo name, e.g. "/medium-clone" if not using a custom domain
 url: "https://vasanth-19.github.io"
-baseurl: "/Learning_Writer"
 
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
